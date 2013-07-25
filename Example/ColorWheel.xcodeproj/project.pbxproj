@@ -231,6 +231,7 @@
 		F47929B915D6D2B600B71086 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorWheel/ColorWheel-Prefix.pch";
 				INFOPLIST_FILE = "ColorWheel/ColorWheel-Info.plist";
@@ -242,6 +243,7 @@
 		F47929BA15D6D2B600B71086 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ColorWheel/ColorWheel-Prefix.pch";
 				INFOPLIST_FILE = "ColorWheel/ColorWheel-Info.plist";

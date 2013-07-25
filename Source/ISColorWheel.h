@@ -10,35 +10,20 @@
 @class ISColorWheel;
 
 @protocol ISColorWheelDelegate <NSObject>
-@required
-- (void)colorWheelDidChangeColor:(ISColorWheel*)colorWhee;
+- (void)colorWheelDidChangeColor:(ISColorWheel*)colorWheel;
 @end
 
 
 @interface ISColorWheel : UIView
-{
-    CGImageRef _radialImage;
-    UIView* _knobView;
-    float _radius;
-    CGSize _knobSize;
-    CGPoint _touchPoint;
-    float _brightness;
-    bool _continuous;
-    id <ISColorWheelDelegate> _delegate;
-    
-}
-@property(nonatomic, retain)UIView* knobView;
-@property(nonatomic, assign)CGSize knobSize;
-@property(nonatomic, assign)float brightness;
-@property(nonatomic, assign)bool continuous;
-@property(nonatomic, assign)id <ISColorWheelDelegate> delegate;
+
+@property(nonatomic, strong) UIView* knobView;
+@property(nonatomic, assign) CGSize knobSize;
+@property(nonatomic, assign) CGFloat brightness;
+@property(nonatomic, assign) BOOL continuous;
+@property(nonatomic, weak) id <ISColorWheelDelegate> delegate;
+@property (nonatomic, assign) UIColor* currentColor;
 
 - (void)updateImage;
-
-- (void)setCurrentColor:(UIColor*)color;
-- (UIColor*)currentColor;
-
-
 - (void)setTouchPoint:(CGPoint)point;
 
 @end
