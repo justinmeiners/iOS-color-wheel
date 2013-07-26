@@ -9,9 +9,7 @@
 #import "MainViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-    UIWindow* _window;
-    MainViewController* _mainViewController;
-}
+
+@property (nonatomic, strong) UIWindow *window;
 
 @end

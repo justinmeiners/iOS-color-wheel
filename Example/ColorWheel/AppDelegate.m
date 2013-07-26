@@ -9,21 +9,14 @@
 
 @implementation AppDelegate
 
-- (void)dealloc
-{
-    [_window release];
-    [super dealloc];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    _mainViewController = [[MainViewController alloc] init];
-    _mainViewController.view.frame = _window.bounds;
-    _window.rootViewController = _mainViewController;
-    [_window addSubview:_mainViewController.view];
-    [_window makeKeyAndVisible];
+    MainViewController *mainViewController = [[MainViewController alloc] init];
+    self.window.rootViewController = mainViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
